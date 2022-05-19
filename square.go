@@ -15,10 +15,14 @@ func (square Square) End() Point {
 	if x > 0 && y > 0 {
 		x = x + int(square.a)
 		y = y - int(square.a)
+	} else if x < 0 && y < 0 {
+		x = x + int(square.a)
+		y = y + int(square.a)
 	} else {
 		x = x - int(square.a)
 		y = y + int(square.a)
 	}
+
 	return Point{x, y}
 }
 
