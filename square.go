@@ -14,14 +14,14 @@ func (square Square) End() Point {
 	var y int = square.start.y
 	if x > 0 && y > 0 {
 		x = x + int(square.a)
-		y = y - int(square.a)
+		y = y + int(square.a)
 	} else if x < 0 && y < 0 {
 		x = x + int(square.a)
 		y = y + int(square.a)
 	} else if x > 0 && y < 0 {
 		x = x + int(square.a)
 		y = y - int(square.a)
-	} else {
+	} else if x < 0 && y > 0 {
 		x = x - int(square.a)
 		y = y + int(square.a)
 	}
